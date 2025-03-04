@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
-from localflavor.ie import IECountySelect, EircodeField
+from localflavor.ie.forms import IECountySelect, EircodeField
+from users.utils import user_directory_path
 
 
 class Location(models.Model):
@@ -17,11 +18,12 @@ class Location(models.Model):
 class Profile(models.Model):
     'model to store user data'
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    photo = models.ImageField(upload_to='users/photos', blank=True, null=True)
+    photo = models.ImageField(
+        upload_to=user_directory_path, blank=True, null=True)
     bio = models.CharField(max_length=255, blank=True)
     phone_no = models.CharField(max_length=12, blank=True)
     location = models.OneToOneField(
-        Location, on_delete=models.CASCADE, blank=True, null=True)
+        Location, on_delete=models.SET_NULL, blank=True, null=True)
     objects = models.Manager()
 
     def __str__(self):
