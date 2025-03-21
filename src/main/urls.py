@@ -1,7 +1,7 @@
 # Django imports
 'python function to use path in urls'
 from django.urls import path
-from .views import home
+from .views import main
 urlpatterns = [
-    path('', home, name='home'),
+    path('', main, name='main'),
 ]
