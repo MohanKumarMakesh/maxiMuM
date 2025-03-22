@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-# Create your models here.
-from localflavor.ie.forms import IECountySelect, EircodeField
+from address.ie_counties import IE_COUNTY_CHOICES  # Import county choices
+from address.forms import EircodeField  # Import EircodeField for its validatorfrom users.utils import user_directory_path
 from users.utils import user_directory_path
 
 
@@ -10,8 +10,16 @@ class Location(models.Model):
     address_1 = models.CharField(max_length=255)
     address_2 = models.CharField(max_length=255, blank=True)
     city = models.CharField(max_length=100)
-    county = IECountySelect()
-    eircode = EircodeField()
+    county = models.CharField(
+        max_length=50,
+        choices=IE_COUNTY_CHOICES,
+        blank=True # Use choices from IECountySelect
+    )
+    eircode = models.CharField(
+        max_length=10,
+        validators=[EircodeField().validators[0]],
+        blank=True  # Use the validator from EircodeField
+    )    
     objects = models.Manager()
 
 

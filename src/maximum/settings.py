@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'crispy_forms',
     'users',
-    'localflavor',
+    'address',
+  
 ]
 
 MIDDLEWARE = [
