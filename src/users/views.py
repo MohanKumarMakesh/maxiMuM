@@ -27,7 +27,7 @@ def login_view(request):
 def logout_view(request):
     'view to logout user'
     logout(request)
-    return redirect('home')
+    return redirect('/')
 
 class RegisterView(View):
     def get(self, request):

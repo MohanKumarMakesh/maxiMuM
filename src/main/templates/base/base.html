@@ -32,19 +32,19 @@
         {% endfor %}
         {% endif %}
         {% block 'header' %}
-        <header class="p-3 bg-dark text-white w-100 nav-masthead">
+        <header class="p-3 bg-light text-white w-100 nav-masthead">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                     <a href="{% url 'home' %}"
-                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                        <img class="'bi me-2" src="{% static 'images/logo.png' %}" alt="maxiMuM" width="60" height="50">
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-black text-decoration-none">
+                        <img class="'bi me-2" src="{% static 'images/logo.png' %}" alt="maxiMuM" width="77" height="60">
                     </a>
                     {% if user.is_authenticated %}
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="" class="nav-link px-2 text-white">Profile</a></li>
+                        <li><a href="" class="nav-link px-2 text-black">Profile</a></li>
                     </ul>
-                    <div class="text-end">
-                        <a href="{% url 'logout' %}" class="btn btn-outline-light me-2" type="button">Logout</a>
+                    <div class="text-end text-black">
+                        <a href="{% url 'logout' %}" class="btn btn-outline-dark me-2 " type="button">Logout</a>
                         {%endif%}
                     </div>
                 </div>
@@ -55,7 +55,7 @@
     </body>
 
     {% block 'footer' %}
-    <footer class="footer text-muted bg-dark py-5">
+    <footer class="footer text-muted bg-light py-5">
         <div class="container">
             <p class="float-end mb-1">Powered by <a href="https://www.djangoproject.com/">Django</a></p>
             </p>

@@ -19,3 +19,6 @@ class Listing(models.Model):
   transmission = models.CharField(max_length=24, choices=TRANSMISSION_OPTIONS)
   location = models.OneToOneField('users.Location', on_delete=models.SET_NULL, blank=True, null=True)
   image = models.ImageField(upload_to='listings/', blank=True, null=True)
+
+  def __str__(self):
+    return f'{self.seller.user.username}`s {self.model}'

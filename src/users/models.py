@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from address.ie_counties import IE_COUNTY_CHOICES  # Import county choices
-from address.forms import EircodeField  # Import EircodeField for its validatorfrom users.utils import user_directory_path
+from address.ie_counties import IE_COUNTY_CHOICES  
+from address.forms import EircodeField 
 from users.utils import user_directory_path
 
 
