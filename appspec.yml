@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: src/  # Source directory inside the deployment bundle
+  - source: /  # Source directory inside the deployment bundle
     destination: /var/www/maximum  # Destination directory on the EC2 instance
   - source: scripts/  # Include the scripts directory
     destination: /var/www/maximum/scripts

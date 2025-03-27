@@ -11,7 +11,7 @@ sudo mkdir -p /var/www/maximum
 sudo chown -R $USER:$USER /var/www/maximum
 
 # Set up the virtual environment
-cd /var/www/maximum
+cd /var/www/maximum/src
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt

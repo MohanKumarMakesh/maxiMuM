@@ -3,11 +3,11 @@ server {
     server_name _;
 
     location /static/ {
-        alias /var/www/maximum/static/;
+        alias /var/www/maximum/src/static/;
     }
 
     location /media/ {
-        alias /var/www/maximum/media/;
+        alias /var/www/maximum/src/media/;
     }
 
     location / {
