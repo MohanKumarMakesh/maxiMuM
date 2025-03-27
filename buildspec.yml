@@ -20,8 +20,7 @@ phases:
       - ls
   build:
     commands:
-      - echo Collecting static files...
-      - cd src  # Navigate to the src directory
+      - echo Collecting static files...  # Navigate to the src directory
       - source venv/bin/activate
       - python manage.py collectstatic --noinput
       - echo Running tests...
@@ -29,8 +28,7 @@ phases:
 
   post_build:
     commands:
-      - echo Zipping the source code...
-      - cd src  # Navigate to the src directory
+      - echo Zipping the source code...  # Navigate to the src directory
       - zip -r ../deployment_bundle.zip . -x "*.git*" "*.DS_Store"
 
 artifacts:
