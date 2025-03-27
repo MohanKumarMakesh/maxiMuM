@@ -30,9 +30,8 @@ phases:
     commands:
       - echo Zipping the source code...
       - cd src  # Navigate to the src directory
-      - zip -r ../deployment-bundle.zip . -x "*.git*" "*.DS_Store"
+      - zip -r ../deployment_bundle.zip . -x "*.git*" "*.DS_Store"
 
 artifacts:
   files:
-    - deployment-bundle.zip
-  discard-paths: yes
+    - '**/*'
