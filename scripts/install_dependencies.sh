@@ -20,4 +20,4 @@ pip install -r requirements.txt
 sudo cp /var/www/maximum/scripts/nginx_config /etc/nginx/sites-available/maximum
 sudo ln -sf /etc/nginx/sites-available/maximum /etc/nginx/sites-enabled
 sudo rm -f /etc/nginx/sites-enabled/default
-sudo systemctl restart nginx
+sudo systemctl restart nginx;
