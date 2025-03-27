@@ -6,20 +6,18 @@ permissions:
     owner: ec2-user
     group: apache
 files:
-  - source: /  # Source directory inside the deployment bundle
-    destination: /var/www/maximum  # Destination directory on the EC2 instance
-  - source: scripts/  # Include the scripts directory
-    destination: /var/www/maximum/scripts
+  - source: ./  # Use relative path to include all files in the deployment bundle
+    destination: /var/www/maximum
 
 hooks:
   AfterInstall:
-    - location: /var/www/maximum/scripts/install_dependencies.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
-    - location: /var/www/maximum/scripts/migrate_database.sh
+    - location: scripts/migrate_database.sh
       timeout: 300
   ApplicationStart:
-    - location: /var/www/maximum/scripts/start_server.sh
+    - location: scripts/start_server.sh
       timeout: 300
   ApplicationStop:
-    - location: /var/www/maximum/scripts/stop_server.sh
+    - location: scripts/stop_server.sh
       timeout: 300

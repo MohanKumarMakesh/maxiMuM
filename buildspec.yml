@@ -27,6 +27,7 @@ phases:
   post_build:
     commands:
       - echo Zipping the source code...
+      - ls
       - zip -r deployment_bundle.zip . -x "*.git*" "*.DS_Store"
 
 artifacts:
