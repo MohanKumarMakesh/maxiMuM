@@ -6,7 +6,7 @@ permissions:
     owner: ec2-user
     group: apache
 files:
-  - source: ./  # Use relative path to include all files in the deployment bundle
+  - source: /  # Use relative path to include all files in the deployment bundle
     destination: /var/www/maximum
 
 hooks:
