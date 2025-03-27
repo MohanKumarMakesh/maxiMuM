@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.9  # Specify the Python version
+      python: 3.12.3  # Specify the Python version
     commands:
       - echo Installing dependencies...
       - pip install --upgrade pip
@@ -12,7 +12,7 @@ phases:
   pre_build:
     commands:
       - echo Setting up virtual environment...
-      - cd src  # Navigate to the src directory
+      - cd src  # Navigate to the src direct  ory
       - python3 -m venv venv
       - source venv/bin/activate
       - pip install -r requirements.txt
