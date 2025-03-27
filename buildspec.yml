@@ -12,6 +12,7 @@ phases:
   pre_build:
     commands:
       - echo Setting up virtual environment...
+      - cd src  # Navigate to the src directory
       - python3 -m venv venv
       - source venv/bin/activate
       - pip install -r requirements.txt
@@ -19,6 +20,8 @@ phases:
   build:
     commands:
       - echo Collecting static files...
+      - cd src  # Navigate to the src directory
+      - source venv/bin/activate
       - python manage.py collectstatic --noinput
       - echo Running tests...
       - python manage.py test
@@ -26,7 +29,8 @@ phases:
   post_build:
     commands:
       - echo Zipping the source code...
-      - zip -r deployment-bundle.zip . -x "*.git*" "*.DS_Store"
+      - cd src  # Navigate to the src directory
+      - zip -r ../deployment-bundle.zip . -x "*.git*" "*.DS_Store"
 
 artifacts:
   files:

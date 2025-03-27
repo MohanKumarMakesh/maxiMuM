@@ -1,17 +1,20 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /var/www/maximum
+  - source: src/  # Source directory inside the deployment bundle
+    destination: /var/www/maximum  # Destination directory on the EC2 instance
+  - source: scripts/  # Include the scripts directory
+    destination: /var/www/maximum/scripts
+
 hooks:
   AfterInstall:
-    - location: scripts/install_dependencies.sh
+    - location: /var/www/maximum/scripts/install_dependencies.sh
       timeout: 300
-    - location: scripts/migrate_database.sh
+    - location: /var/www/maximum/scripts/migrate_database.sh
       timeout: 300
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: /var/www/maximum/scripts/start_server.sh
       timeout: 300
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: /var/www/maximum/scripts/stop_server.sh
       timeout: 300
