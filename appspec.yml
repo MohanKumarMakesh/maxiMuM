@@ -1,5 +1,10 @@
 version: 0.0
 os: linux
+permissions:
+  - object: /var/www/maximum
+    pattern: "**"
+    owner: ec2-user
+    group: apache
 files:
   - source: /  # Source directory inside the deployment bundle
     destination: /var/www/maximum  # Destination directory on the EC2 instance
