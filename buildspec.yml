@@ -34,3 +34,8 @@ phases:
 artifacts:
   files:
     - deployment_bundle.zip
+
+
+eb_codebuild_settings:
+  artifact_name: deployment_bundle.zip
+  deployment_package: true
