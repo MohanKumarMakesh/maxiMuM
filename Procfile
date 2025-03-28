@@ -1,1 +1,1 @@
-web: gunicorn --chdir  maximum wsgi:application --bind 0.0.0.0:8000
+web: gunicorn --chdir src maximum.wsgi:application --bind 0.0.0.0:8000
