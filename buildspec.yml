@@ -22,7 +22,7 @@ phases:
       - source venv/bin/activate
       - python src/manage.py collectstatic --noinput
       - echo Syncing the static files...
-      - aws s3 sync src/static/ s3://x23377852-maximum.s3.amazonaws.com/static/ --acl public-read
+      - aws s3 sync src/staticfiles/ s3://x23377852-maximum.s3.amazonaws.com/static/ --acl public-read
       - echo Running tests...
       - python src/manage.py test
 
@@ -38,6 +38,3 @@ artifacts:
     - deployment_bundle.zip
 
 
-eb_codebuild_settings:
-  artifact_name: deployment_bundle.zip
-  deployment_package: true
