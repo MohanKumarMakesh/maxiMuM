@@ -4,7 +4,7 @@ permissions:
   - object: /var/www/maximum
     pattern: "**"
     owner: ec2-user
-    group: apache
+    group: nginx
 files:
   - source: /  # Use relative path to include all files in the deployment bundle
     destination: /var/www/maximum
