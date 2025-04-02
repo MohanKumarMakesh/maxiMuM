@@ -135,7 +135,7 @@ AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 
-#STATIC_ROOT = BASE_DIR / 'staticfiles/'
+STATIC_ROOT = BASE_DIR / 'staticfiles/'
 #MEDIA_URL = '/media/'
 
 AWS_STORAGE_BUCKET_NAME = 'x23377852-maximum'  
