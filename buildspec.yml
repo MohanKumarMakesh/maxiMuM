@@ -30,4 +30,4 @@ artifacts:
     - 'Procfile'
     - '.ebextensions/**'
     
-  discard-paths: no
+  discard-paths: no 
