@@ -33,4 +33,6 @@ artifacts:
     - 'Procfile'
     - '.ebextensions/**'
     - 'requirements.txt'
+    - 'scripts/**'
+  name: 'maximum-${VERSION}'
   discard-paths: no 
