@@ -26,5 +26,8 @@ phases:
 
 artifacts:
   files:
-    - 'src/**' 
+    - 'src/**'
+    - 'Procfile'
+    - '.ebextensions/**'
+    
   discard-paths: no
