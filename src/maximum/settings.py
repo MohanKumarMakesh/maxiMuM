@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 from django.contrib import messages
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,8 +85,12 @@ WSGI_APPLICATION = 'maximum.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ.get('RDS_DB_NAME'),  # Replace with your DB name
+        'USER': os.environ.get('RDS_USERNAME'),      # Replace with your username
+        'PASSWORD': os.environ.get('RDS_PASSWORD'),  # Replace with your password
+        'HOST': os.environ.get('RDS_HOSTNAME'), # Replace with your RDS endpoint
+        'PORT': os.environ.get('RDS_PORT', '3306'),                   # Default MySQL port
     }
 }
 
