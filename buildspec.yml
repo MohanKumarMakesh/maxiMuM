@@ -24,5 +24,7 @@ phases:
       - echo Running tests...
       - python src/manage.py test
 
-
-
+artifacts:
+  files:
+    - '**/*'  
+  discard-paths: no
