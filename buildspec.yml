@@ -30,6 +30,4 @@ artifacts:
     - 'Procfile'
     - '.ebextensions/**'
     - 'requirements.txt'
-  base-directory: src  # Specify the base directory for the artifacts
-    
   discard-paths: no 
