@@ -25,15 +25,5 @@ phases:
       - echo Running tests...
       - python src/manage.py test
 
-  post_build:
-    commands:
-      - echo Zipping the source code...
-      - ls
-      - zip -r deployment_bundle.zip . -x "*.git*" "*.DS_Store"
-
-
-artifacts:
-  files:
-    - deployment_bundle.zip
 
 
