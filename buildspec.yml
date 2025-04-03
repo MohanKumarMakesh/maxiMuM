@@ -21,8 +21,7 @@ phases:
       - echo Collecting static files...
       - source venv/bin/activate
       - python src/manage.py collectstatic --noinput
-      - echo Syncing the static files...
-      - aws s3 sync src/staticfiles/ s3://x23377852-maximum.s3.amazonaws.com/static/ --acl public-read
+
       - echo Running tests...
       - python src/manage.py test
 
