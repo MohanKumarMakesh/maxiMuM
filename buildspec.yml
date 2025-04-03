@@ -21,7 +21,6 @@ phases:
       - echo Collecting static files...
       - source venv/bin/activate
       - python src/manage.py collectstatic --noinput
-
       - echo Running tests...
       - python src/manage.py test
 
