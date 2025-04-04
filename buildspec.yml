@@ -47,13 +47,13 @@ phases:
       - echo PROJECT=$PROJECT
       - echo ORGANIZATION=$ORGANIZATION
       - sonar-scanner \
-          -Dsonar.projectKey=$Project \
-          -Dsonar.organization=$Organization \
+          -Dsonar.projectKey=$PROJECT \
+          -Dsonar.organization=$ORGANIZATION \
           -Dsonar.host.url=$HOST \
           -Dsonar.login=$LOGIN \
           -Dsonar.sources=src \
           -Dsonar.exclusions=**/migrations/**,**/tests/** \
-          -Dsonar.python.version=3.
+          -Dsonar.python.version=3.12
       - echo Checking SonarCloud Quality Gate...
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project > result.json
       - cat result.json
