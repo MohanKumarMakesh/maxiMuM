@@ -9,6 +9,7 @@ phases:
   install:
     runtime-versions:
       python: 3.12.3  # Specify the Python version
+      java: corretto17
     commands:
       - echo Installing dependencies...
       - pip install --upgrade pip
