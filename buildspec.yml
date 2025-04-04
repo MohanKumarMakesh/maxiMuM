@@ -1,5 +1,10 @@
 version: 0.2
-
+env:
+  secrets-manager:
+    - LOGIN: prod/x23377852-sonar:login
+    - HOST: prod/x23377852-sonar:host
+    - PROJECT: prod/x23377852-sonar:project
+    - ORGANIZATION: prod/x23377852-sonar:org
 phases:
   install:
     runtime-versions:
@@ -8,6 +13,11 @@ phases:
       - echo Installing dependencies...
       - pip install --upgrade pip
       - pip install virtualenv
+      - echo Installing SonarScanner...
+      - curl -sSLo sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.8.0.2856-linux.zip
+      - unzip sonar-scanner-cli.zip -d /usr/local
+      - export PATH=$PATH:/usr/local/sonar-scanner-4.8.0.2856-linux/bin
+
 
   pre_build:
     commands:
@@ -26,6 +36,19 @@ phases:
       - python src/manage.py migrate
       - echo Running tests...
       - python src/manage.py test
+      - echo Running SonarScanner...
+      - sonar-scanner \
+          -Dsonar.projectKey=$Project \
+          -Dsonar.organization=$Organization \
+          -Dsonar.host.url=$HOST \
+          -Dsonar.login=$LOGIN \
+          -Dsonar.sources=src \
+          -Dsonar.exclusions=**/migrations/**,**/tests/** \
+          -Dsonar.python.version=3.
+      - echo Checking SonarCloud Quality Gate...
+      - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$Project > result.json
+      - cat result.json
+      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then exit 1; fi
 
 artifacts:
   files:
