@@ -19,7 +19,7 @@ phases:
       - export PATH=$JAVA_HOME/bin:$PATH
       - java -version
       - echo Installing SonarScanner...
-      - curl -sSLo sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.8.0.2856-linux.zip
+      - curl -sSLo sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-latest.zip
       - unzip sonar-scanner-cli.zip -d /usr/local
       - export PATH=$PATH:/usr/local/sonar-scanner-4.8.0.2856-linux/bin/
       - echo Verifying dependencies...
