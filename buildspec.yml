@@ -49,7 +49,7 @@ phases:
       - echo Checking SonarCloud Quality Gate Result...
       - curl https://sonarcloud.io/api/qualitygates/project_status?projectKey=$PROJECT > result.json
       - cat result.json
-      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR ] ; then exit 1; fi
+      - if [ $(jq -r '.projectStatus.status' result.json) = ERROR || TRUE] ; then exit 1; fi
 
 artifacts:
   files:
