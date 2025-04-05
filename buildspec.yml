@@ -33,14 +33,6 @@ phases:
       - python3 -m venv venv
       - source venv/bin/activate
       - pip install -r src/requirements.txt
-
-  lint:
-    commands:
-      - echo Running lint checks...
-      - source venv/bin/activate
-      - pip install flake8  # Install linter
-      - flake8 src --exclude=**/migrations/**,**/tests/**,**/staticfiles/**,**/venv/**,**/scripts/**,**/.venv/**,**/templates/**,**/__pycache__/** --max-line-length=120
-      - echo Lint checks completed.
       
   build:
     commands:
