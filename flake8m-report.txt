@@ -1,0 +1,134 @@
+src/address/admin.py:1:1: F401 'django.contrib.admin' imported but unused
+src/address/forms.py:32:80: E501 line too long (82 > 79 characters)
+src/address/forms.py:36:80: E501 line too long (80 > 79 characters)
+src/address/forms.py:48:54: W292 no newline at end of file
+src/address/ie_counties.py:31:2: W292 no newline at end of file
+src/address/models.py:1:1: F401 'django.db.models' imported but unused
+src/address/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+src/address/views.py:1:1: F401 'django.shortcuts.render' imported but unused
+src/main/admin.py:4:1: E302 expected 2 blank lines, found 0
+src/main/admin.py:6:1: E305 expected 2 blank lines after class or function definition, found 0
+src/main/consts.py:22:2: W292 no newline at end of file
+src/main/filters.py:4:1: E302 expected 2 blank lines, found 1
+src/main/filters.py:5:80: E501 line too long (81 > 79 characters)
+src/main/filters.py:5:82: W291 trailing whitespace
+src/main/filters.py:9:26: E231 missing whitespace after ','
+src/main/filters.py:9:41: E231 missing whitespace after ','
+src/main/filters.py:11:1: W391 blank line at end of file
+src/main/forms.py:4:1: E302 expected 2 blank lines, found 1
+src/main/forms.py:7:26: E231 missing whitespace after ','
+src/main/forms.py:7:34: E231 missing whitespace after ','
+src/main/forms.py:7:40: E231 missing whitespace after ','
+src/main/forms.py:7:50: E231 missing whitespace after ','
+src/main/forms.py:8:32: E231 missing whitespace after ','
+src/main/forms.py:8:41: E231 missing whitespace after ','
+src/main/forms.py:8:56: E231 missing whitespace after ','
+src/main/forms.py:8:65: W292 no newline at end of file
+src/main/migrations/0001_initial.py:20:80: E501 line too long (125 > 79 characters)
+src/main/migrations/0001_initial.py:23:80: E501 line too long (111 > 79 characters)
+src/main/migrations/0002_listing_brand_listing_color_listing_description_and_more.py:18:80: E501 line too long (438 > 79 characters)
+src/main/migrations/0002_listing_brand_listing_color_listing_description_and_more.py:38:80: E501 line too long (82 > 79 characters)
+src/main/migrations/0002_listing_brand_listing_color_listing_description_and_more.py:43:80: E501 line too long (129 > 79 characters)
+src/main/migrations/0002_listing_brand_listing_color_listing_description_and_more.py:58:80: E501 line too long (128 > 79 characters)
+src/main/migrations/0003_alter_listing_color_alter_listing_description_and_more.py:9:80: E501 line too long (82 > 79 characters)
+src/main/migrations/0003_alter_listing_color_alter_listing_description_and_more.py:36:80: E501 line too long (110 > 79 characters)
+src/main/models.py:4:31: E231 missing whitespace after ','
+src/main/models.py:5:1: F401 '.utils.user_listing_path' imported but unused
+src/main/models.py:7:1: E302 expected 2 blank lines, found 0
+src/main/models.py:8:3: E111 indentation is not a multiple of 4
+src/main/models.py:8:80: E501 line too long (90 > 79 characters)
+src/main/models.py:9:3: E111 indentation is not a multiple of 4
+src/main/models.py:10:3: E111 indentation is not a multiple of 4
+src/main/models.py:11:3: E111 indentation is not a multiple of 4
+src/main/models.py:12:3: E111 indentation is not a multiple of 4
+src/main/models.py:12:41: E231 missing whitespace after ','
+src/main/models.py:13:3: E111 indentation is not a multiple of 4
+src/main/models.py:14:3: E111 indentation is not a multiple of 4
+src/main/models.py:15:3: E111 indentation is not a multiple of 4
+src/main/models.py:16:3: E111 indentation is not a multiple of 4
+src/main/models.py:17:3: E111 indentation is not a multiple of 4
+src/main/models.py:18:3: E111 indentation is not a multiple of 4
+src/main/models.py:19:3: E111 indentation is not a multiple of 4
+src/main/models.py:20:3: E111 indentation is not a multiple of 4
+src/main/models.py:20:80: E501 line too long (101 > 79 characters)
+src/main/models.py:21:3: E111 indentation is not a multiple of 4
+src/main/models.py:23:3: E111 indentation is not a multiple of 4
+src/main/models.py:24:57: W292 no newline at end of file
+src/main/tests.py:1:1: F401 'django.test.TestCase' imported but unused
+src/main/views.py:11:1: E302 expected 2 blank lines, found 0
+src/main/views.py:14:1: E302 expected 2 blank lines, found 0
+src/main/views.py:22:1: E302 expected 2 blank lines, found 1
+src/main/views.py:38:9: E722 do not use bare 'except'
+src/main/views.py:41:45: W291 trailing whitespace
+src/main/views.py:46:80: E501 line too long (97 > 79 characters)
+src/main/views.py:47:1: W293 blank line contains whitespace
+src/main/views.py:47:5: W292 no newline at end of file
+src/maximum/settings.py:25:80: E501 line too long (81 > 79 characters)
+src/maximum/settings.py:49:1: W293 blank line contains whitespace
+src/maximum/settings.py:90:80: E501 line too long (81 > 79 characters)
+src/maximum/settings.py:91:80: E501 line too long (81 > 79 characters)
+src/maximum/settings.py:92:48: E261 at least two spaces before inline comment
+src/maximum/settings.py:92:80: E501 line too long (80 > 79 characters)
+src/maximum/settings.py:93:80: E501 line too long (90 > 79 characters)
+src/maximum/settings.py:103:80: E501 line too long (91 > 79 characters)
+src/maximum/settings.py:106:80: E501 line too long (81 > 79 characters)
+src/maximum/settings.py:109:80: E501 line too long (82 > 79 characters)
+src/maximum/settings.py:112:80: E501 line too long (83 > 79 characters)
+src/maximum/settings.py:115:1: E265 block comment should start with '# '
+src/maximum/settings.py:116:19: E225 missing whitespace around operator
+src/maximum/settings.py:117:10: E225 missing whitespace around operator
+src/maximum/settings.py:119:1: E265 block comment should start with '# '
+src/maximum/settings.py:139:1: E265 block comment should start with '# '
+src/maximum/settings.py:145:1: E265 block comment should start with '# '
+src/maximum/settings.py:147:46: W291 trailing whitespace
+src/maximum/urls.py:31:80: E501 line too long (80 > 79 characters)
+src/maximum/urls.py:31:81: W292 no newline at end of file
+src/users/apps.py:9:9: F401 'users.signals' imported but unused
+src/users/forms.py:4:50: W291 trailing whitespace
+src/users/forms.py:5:39: W291 trailing whitespace
+src/users/forms.py:6:1: E302 expected 2 blank lines, found 0
+src/users/forms.py:7:3: E111 indentation is not a multiple of 4
+src/users/forms.py:8:3: E111 indentation is not a multiple of 4
+src/users/forms.py:8:80: E501 line too long (85 > 79 characters)
+src/users/forms.py:9:3: E301 expected 1 blank line, found 0
+src/users/forms.py:9:3: E111 indentation is not a multiple of 4
+src/users/forms.py:11:69: W292 no newline at end of file
+src/users/migrations/0001_initial.py:20:80: E501 line too long (117 > 79 characters)
+src/users/migrations/0001_initial.py:21:80: E501 line too long (94 > 79 characters)
+src/users/migrations/0001_initial.py:24:80: E501 line too long (121 > 79 characters)
+src/users/migrations/0002_location.py:16:80: E501 line too long (117 > 79 characters)
+src/users/migrations/0003_profile_location.py:17:80: E501 line too long (128 > 79 characters)
+src/users/migrations/0004_alter_profile_location_alter_profile_photo.py:18:80: E501 line too long (129 > 79 characters)
+src/users/migrations/0004_alter_profile_location_alter_profile_photo.py:23:80: E501 line too long (102 > 79 characters)
+src/users/migrations/0005_location_county_location_eircode.py:17:80: E501 line too long (672 > 79 characters)
+src/users/migrations/0005_location_county_location_eircode.py:22:80: E501 line too long (133 > 79 characters)
+src/users/models.py:3:50: W291 trailing whitespace
+src/users/models.py:4:39: W291 trailing whitespace
+src/users/models.py:16:19: E261 at least two spaces before inline comment
+src/users/models.py:22:6: W291 trailing whitespace
+src/users/signals.py:3:47: E203 whitespace before ','
+src/users/signals.py:22:1: E302 expected 2 blank lines, found 0
+src/users/signals.py:23:45: E231 missing whitespace after ','
+src/users/signals.py:25:35: W292 no newline at end of file
+src/users/tests/test_users_views.py:7:1: E302 expected 2 blank lines, found 1
+src/users/tests/test_users_views.py:12:80: E501 line too long (92 > 79 characters)
+src/users/tests/test_users_views.py:19:80: E501 line too long (81 > 79 characters)
+src/users/tests/test_users_views.py:52:80: E501 line too long (82 > 79 characters)
+src/users/tests/test_users_views.py:75:75: W292 no newline at end of file
+src/users/views.py:7:1: E302 expected 2 blank lines, found 0
+src/users/views.py:10:41: E201 whitespace after '('
+src/users/views.py:12:21: E221 multiple spaces before operator
+src/users/views.py:26:1: E302 expected 2 blank lines, found 0
+src/users/views.py:32:1: E302 expected 2 blank lines, found 1
+src/users/views.py:36:80: E501 line too long (87 > 79 characters)
+src/users/views.py:37:5: E301 expected 1 blank line, found 0
+src/users/views.py:39:42: E201 whitespace after '('
+src/users/views.py:41:14: E111 indentation is not a multiple of 4
+src/users/views.py:41:14: E117 over-indented
+src/users/views.py:42:14: E111 indentation is not a multiple of 4
+src/users/views.py:43:14: E111 indentation is not a multiple of 4
+src/users/views.py:44:14: E111 indentation is not a multiple of 4
+src/users/views.py:45:14: E111 indentation is not a multiple of 4
+src/users/views.py:48:80: E501 line too long (91 > 79 characters)
+src/users/views.py:49:1: W293 blank line contains whitespace
+src/users/views.py:49:9: W292 no newline at end of file
