@@ -136,25 +136,26 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-#AWS storage settings
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
 
 STATIC_ROOT = BASE_DIR / 'staticfiles/'
 #MEDIA_URL = '/media/'
-
-AWS_STORAGE_BUCKET_NAME = 'x23377852-maximum'  
-AWS_S3_REGION_NAME = 'eu-west-1'  # e.g. 'us-east-1'
+# AWS S3 Storage Settings
+AWS_STORAGE_BUCKET_NAME = 'maximum-car'
+AWS_S3_REGION_NAME = 'eu-north-1'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
+
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/staticfiles/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# Media files (if needed)
+
+# Media files (local storage)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+# Use default file storage for local media storage
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 # Default form style for crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
