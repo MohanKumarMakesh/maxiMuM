@@ -86,3 +86,16 @@ def edit_view(request, id):
         messages.error(
             request, f'An error occured while trying to access the edit page.')
         return redirect('home')
+@login_required
+def delete_view(request, id):
+    try:
+        listing = Listing.objects.get(id=id)
+        if listing is None:
+            raise Exception
+        listing.delete()
+        messages.info(request, f'Listing {id} deleted successfully!')
+        return redirect('home')
+    except Exception as e:
+        messages.error(
+            request, f'An error occured while trying to delete the listing.')
+        return redirect('home')
