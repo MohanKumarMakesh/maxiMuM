@@ -71,6 +71,8 @@ artifacts:
     - '.ebextensions/**'
     - 'requirements.txt'
     - 'scripts/**'
+    - 'buildspec.yml'
+    - 'buildspec-lint.yml'
   name: 'maximum-${VERSION}'
   discard-paths: no 
 
