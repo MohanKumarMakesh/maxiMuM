@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Python and dependencies on Amazon Linux...
+      - sudo yum update -y
+      - sudo yum install -y python3 python3-pip
+      - python3 --version
+      - pip3 --version
+
+  pre_build:
+    commands:
+      - echo Setting up virtual environment...
+      - python3 -m venv venv
+      - source venv/bin/activate
+      - echo Upgrading pip...
+      - pip install --upgrade pip
+      - echo Installing flake8 for linting...
+      - pip install pylint
+      - pip install flake8
+
+  build:
+    commands:
+      - echo Running lint checks with flake8...
+      - flake8 src --exit-zero > flake8-report.txt
+      - echo Running pylint checks...
+      - pylint src > pylint-report.txt
+      - cat pylint-report.txt
+      - echo Lint checks completed successfully.
+
+artifacts:
+  files:
+    - flake8-report.txt
