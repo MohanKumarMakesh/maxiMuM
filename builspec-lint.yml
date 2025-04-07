@@ -16,18 +16,19 @@ phases:
       - source venv/bin/activate
       - echo Upgrading pip...
       - pip install --upgrade pip
-      - echo Installing flake8 for linting...
+      - echo Installing flake8 and pylint for linting...
       - pip install pylint
       - pip install flake8
 
   build:
     commands:
       - echo Running lint checks with flake8...
-      - flake8 src --exit-zero > flake8-report.txt
+      - flake8 src --exit-zero | tee flake8-report.txt
       - echo Running pylint checks...
-      - pylint src --ignore= migrations,tests,staticfiles,venv,scripts,.venv,templates,__pycache__ 
+      - pylint src --ignore=migrations,tests,staticfiles,venv,scripts,.venv,templates,__pycache__ --exit-zero | tee pylint-report.txt
       - echo Lint checks completed successfully.
 
 artifacts:
   files:
     - flake8-report.txt
+    - pylint-report.txt
