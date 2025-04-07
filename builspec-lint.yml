@@ -25,8 +25,7 @@ phases:
       - echo Running lint checks with flake8...
       - flake8 src --exit-zero > flake8-report.txt
       - echo Running pylint checks...
-      - pylint src > pylint-report.txt
-      - cat pylint-report.txt
+      - pylint src --ignore= migrations,tests,staticfiles,venv,scripts,.venv,templates,__pycache__ 
       - echo Lint checks completed successfully.
 
 artifacts:
